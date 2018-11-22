@@ -1,0 +1,25 @@
+#program to display Fibonacci sequence number
+data1 = 10
+
+#first two terms
+
+a = 0
+b = 1
+count = 0
+
+#check if the no of terms valid
+
+if data1 <= 0:
+    print('positive integer')
+elif data1 == 1:
+    print('fibonacci sequence', data1, ':')
+    print(a)
+else:
+    print ('fibonacci sequence', data1, ':')
+    while count < data1:
+        print (a, end = ',')
+        nth = a + b
+    #update values
+        a = b
+        b = nth
+        count += 1
