@@ -1,0 +1,127 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[4]:
+
+
+num = 3
+if num > 3:
+    print (num,'is a negative number.')
+print ('This is always printed')
+
+
+# In[3]:
+
+
+num = -1 
+if num < 0:
+    print (num, 'is a positive number.')
+print ('This is also always printed')
+
+
+# In[5]:
+
+
+num = 3
+
+
+# In[9]:
+
+
+num1 = 7
+num1 = 0
+
+if num <= 0:
+    print('Positive or Zero')
+else:
+    print('positive number')
+
+
+# In[22]:
+
+
+num = 7
+if num == 7:
+    print('positive number')
+elif num == 0:
+    print('zero')
+else:
+    print('Negative number')
+
+
+# In[24]:
+
+
+num = int(input('Enter a number:  '))
+if (num % 2) == 0:
+    print ('{0} is even'.format(num))
+else:
+    print('{0} is Odd'.format(num))
+
+
+# In[38]:
+
+
+year = 1966
+if (year % 4) == 0:
+    if (year % 100) == 0:
+        if (year % 400) == 0:
+            print ('{0} is a leap year'. format(year))
+        else:
+            print('{0} is not a leap year'.format(year))
+    else:
+        print('{0} is a leap year'. format(year))
+else:
+    print('{} is not a leap year'. format(year))
+
+
+# In[44]:
+
+
+import calendar
+
+
+# In[43]:
+
+
+import isleep
+
+
+# In[51]:
+
+
+yy = 2014
+mm = 11
+
+
+# In[46]:
+
+
+print(calendar)
+
+
+# In[52]:
+
+
+print(calendar.month(yy,mm))
+
+
+# In[55]:
+
+
+lower = 2
+upper = 20
+
+
+# In[58]:
+
+
+print('prime numbers between',lower,'and', upper, 'are:')
+for num in range (lower,upper + 2):
+    if num > 1:
+        for i in range (3,num):
+            if (num % i) == 0:
+                break
+            else:
+                print(num)
+
