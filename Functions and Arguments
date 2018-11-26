@@ -1,0 +1,332 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+#functions *def key function
+def my_sqr ():
+    return 2**2
+
+
+# In[30]:
+
+
+my_sqr()
+
+
+# In[31]:
+
+
+a = my_sqr()
+
+
+# In[32]:
+
+
+a
+
+
+# In[36]:
+
+
+def my_poc ():
+    print (2**2)
+
+
+# In[37]:
+
+
+my_poc()
+
+
+# In[38]:
+
+
+b = my_poc()
+
+
+# In[39]:
+
+
+b
+
+
+# In[40]:
+
+
+def my_jqr():
+    print (3**5)
+
+
+# In[41]:
+
+
+my_jqr()
+
+
+# In[42]:
+
+
+c = my_jqr()
+
+
+# In[43]:
+
+
+type(c)
+
+
+# In[44]:
+
+
+type(my_sqr)
+
+
+# In[47]:
+
+
+#normal arguments
+def my_ghf(x):
+    return x**2
+
+
+# In[48]:
+
+
+my_ghf(5)
+
+
+# In[49]:
+
+
+a = my_ghf
+
+
+# In[50]:
+
+
+a(6)
+
+
+# In[51]:
+
+
+def my_sum(x,y):
+    return x+y
+
+
+# In[52]:
+
+
+my_sum(4,5)
+
+
+# In[53]:
+
+
+#Default arguments
+
+def my_val(x=5):
+    return x**3
+
+
+# In[54]:
+
+
+my_val()
+
+
+# In[55]:
+
+
+my_val(8)
+
+
+# In[56]:
+
+
+a = my_val
+
+
+# In[58]:
+
+
+a(12)
+
+
+# In[60]:
+
+
+def my_val1 (x,y,z=7):
+    if type (z) == int:
+        return x+y+z
+    else:
+        print ('z is not an int')
+
+
+# In[62]:
+
+
+my_val1(2,4)
+
+
+# In[63]:
+
+
+my_val1(2,4,True)
+
+
+# In[66]:
+
+
+def my_val1 (x,y,z=7):
+    if type (z) == float:
+        return x+y+z
+    else:
+        print ('z is not an int')
+
+
+# In[67]:
+
+
+my_val1(2,4,2.5)
+
+
+# In[70]:
+
+
+#keyword arguments
+
+def my_val2 (x = 5, y = 0, z = 16):
+    if type (z) == int:
+        return x+y+z
+    else:
+        print ('z is not an int')
+
+
+# In[71]:
+
+
+my_val2()
+
+
+# In[72]:
+
+
+my_val2(y=78,x=21)
+
+
+# In[73]:
+
+
+#Arbitary arguments (*x) - nothing but it's arbitary arguments
+
+def my_sum1 (*x):
+    return sum (x)
+
+
+# In[77]:
+
+
+my_sum1(1,2,3,45,56,67,78,89,90,100)
+
+
+# In[78]:
+
+
+type(my_sum1)
+
+
+# In[92]:
+
+
+def my_sum2(z = 6,*x):
+    print(z)
+    return sum(x)
+my_sum2(2,3,4,5,6)
+
+
+# In[99]:
+
+
+** it converts as dict value so use "variable name.values". 
+def my_add(**kw):
+    print (kw)
+    return sum(kw.values())
+my_add(x=10, y=23, a=34, z=2.6)
+
+
+# In[103]:
+
+
+#Anonymous functions (lambda) is key function
+
+a = lambda x: x**2
+
+
+# In[104]:
+
+
+a(9)
+
+
+# In[105]:
+
+
+b = lambda x,y: x+y
+
+
+# In[106]:
+
+
+b (5,89)
+
+
+# In[107]:
+
+
+c = lambda x,y,z: x=3,y=45,z=40
+
+
+# In[108]:
+
+
+d = lambda *x : sum (x)
+
+
+# In[109]:
+
+
+d(3,4,56,78,90,123)
+
+
+# In[ ]:
+
+
+#lambda associated factors ("map,reduce,filter")
+
+
+# In[111]:
+
+
+map (my_square,[1,2,3,4,5])
+
+
+# In[112]:
+
+
+list (map(lambda x: x**2, [1,2,3,4,5]))
+
+
+# In[114]:
+
+
+list (map(lambda x,y: x+y,[1,2,3],[4,5,6]))
+
+
+# In[116]:
+
+
+[i+j for i,j in zip ([1,2,3],[4,5,6])]
+
+
+# In[ ]:
+
